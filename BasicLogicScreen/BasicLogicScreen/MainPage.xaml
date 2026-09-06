@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicLoginScreen.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20">
+
+            <Label
+                Text="Cody Ackerman"
+                Style="{StaticResource Headline}"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Login Screen"
+                FontAttributes="Bold,Italic"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="User Name" />
+
+            <Entry
+                x:Name="txtUserName"
+                Placeholder="Enter User Name" />
+
+            <Label
+                Text="Password" />
+
+            <Entry
+                x:Name="txtPassword"
+                Placeholder="Enter Password"
+                IsPassword="True" />
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="10">
+
+                <Button
+                    Text="Login"
+                    Grid.Column="0"
+                    Clicked="OnLoginClicked" />
+
+                <Button
+                    Text="Cancel"
+                    Grid.Column="1"
+                    Clicked="OnCancelClicked" />
+
+            </Grid>
+
+            <Label
+                x:Name="lblMessage"
+                HorizontalOptions="Center"
+                FontSize="18" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
